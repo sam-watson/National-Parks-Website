@@ -16,6 +16,8 @@ public class HomePage {
 		WebElement element = webDriver.findElement(By.id("logo"));
 		return element;
 	}
+	
+	
 
 //	public AlienAgeInputPage clickAlienAgeCalculatorLink() {
 //		WebElement link = webDriver.findElement(By.id("alienAgeURL"));

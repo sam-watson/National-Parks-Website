@@ -34,8 +34,7 @@ public class HomePageSteps {
 
 	@Then("^I see a list of park pictures$")
 	public void i_see_a_list_of_park_pictures() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	   
 	}
 
 }

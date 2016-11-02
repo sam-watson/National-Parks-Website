@@ -16,10 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class DetailsController {
 	
 	private ParkDao parkDao;
+	private ForecastDao forecastDao;
 	
 	@Autowired
-	public DetailsController(ParkDao parkDao) {
+	public DetailsController(ParkDao parkDao, ForecastDao forecastDao) {
 		this.parkDao = parkDao;
+		this.forecastDao = forecastDao;
 	}
 	
 	
