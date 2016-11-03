@@ -11,10 +11,9 @@
 				<c:url var="parkImgSrc" value="/img/parks/${fn:toLowerCase(park.parkCode)}.jpg" />
 				<img id="parkImg" src="${parkImgSrc}" alt="${park.parkName}" >
 			</a>
-				<p id="parkName">${park.parkName}</p>
-				<p id="state">${park.state}</p>
+				<h4 id="parkName">${park.parkName}</h4>
+				<h5 id="state">${park.state}</h5>
 				<p id="description">${park.parkDescription}</p>
-			
 		</section>
 	</c:forEach>
 </section>

@@ -11,13 +11,24 @@
 
 <body>
     <header>
-    		<c:url value="/" var="homePageHref" />
-    		<c:url value="/img/logo.png" var="logoSrc" />
+    	<div class= "headerImagePlaceholder">
+    	</div>
+    	<c:url value="/" var="homePageHref" />
+    	<c:url value="/img/logo.png" var="logoSrc" />
         <a href="${homePageHref}">
-        		<img id="logo" src="${logoSrc}" alt="National Park Geek logo" />
+        	<img id="logo" src="${logoSrc}" alt="National Park Geek logo" />
         </a>
-        <h1>The National Park System</h1>
-        <p>The Park System formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The vast majority of the system's mass is in the Sun, with most of the remaining mass contained in Jupiter. The four smaller inner parks, Mercury, Venus, Earth and Mars, are terrestrial parks, being primarily composed of rock and metal. The four outer parks are giant parks, being substantially more massive than the terrestrials. The two largest, Jupiter and Saturn, are gas giants, being composed mainly of hydrogen and helium; the two outermost parks, Uranus and Neptune, are ice giants, being composed largely of substances with relatively high melting points compared with hydrogen and helium, called ices, such as water, ammonia and methane. All parks have almost circular orbits that lie within a nearly flat disc called the ecliptic. </p>
+        <div class = "headerGap">
+    	</div>
+        
+        <div class= "allHeaderText">
+        	<h1>The United States of America National Park System</h1>
+        	<p>The United States National Park System was founded over 4.6 billion years ago when the gravitational collapse of a giant inter-stellar molecular cloud spontaneously created an office building and shot it off into space where it traveled 14.8 light years before landing at its current location - 1849 C Street NW, in Washington D.C. USA. The vast majority of the system's parks were build and maintained by dinosaurs over 100 million years ago before the properties were turned over to the United States Government in 1487 Treaty of Shrevport. Today, the United States maintains just over 9 parks nationwide, where visitors are encouraged to view nature and buy commemorative bottles of water for only $6. Please select from the parks below to get more information about each park and to find out about travel and dining options. From all of us at the USANPS: WELCOME and please enjoy YOUR National Parks!
+    	</div>
+    	
+    	<div class = "headerGap">
+    	</div>
+    
     </header>
     <%-- <nav>
         <h2>Explore The Solar System</h2>
