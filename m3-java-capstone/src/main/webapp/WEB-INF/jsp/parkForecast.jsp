@@ -13,12 +13,5 @@
 		<p id="bigDayLow"> ${forecast[0].lowF} </p>
 		<p id="bigDayWeather">${forecast[0].forecast}
 	</div>
-	<c:forEach var="day" items="${forecast}">
-		<c:url var="weatherImgURL" value="/img/weather/${day.forecastImageName}.png" />
-		<img id="smallDayImg" src="${weatherImgURL}" alt="${day.forecast}" >
-		<p id="smallDayDay"> ${day.day} </p>
-		<p id="smallDayHigh"> ${day.highF} </p>
-		<p id="smallDayLow"> ${day.lowF} </p>
-		<p id="smallDayWeather">${day.forecast} </p>
-	</c:forEach>
+	<c:import url="/WEB-INF/jsp/common/fiveDayForecast.jsp" />
 </section>
