@@ -94,7 +94,7 @@ public class ForecastDay {
 	
 	public double tempFromFarenheitToCelsius(double tempF){
 	    Double celsiusTemp;
-	    celsiusTemp = ((tempF - 32)*(5/9));
+	    celsiusTemp = ((tempF - 32)*(5d/9));
 	    return celsiusTemp;
 	}
 }

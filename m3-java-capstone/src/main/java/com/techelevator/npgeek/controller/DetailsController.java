@@ -30,6 +30,10 @@ public class DetailsController {
 	
 	@RequestMapping("/parkDetails")
 	public String displayParkDetails(@RequestParam String code, ModelMap modelMap) {
+		if (modelMap.get("preferences") == null) {
+			Preferences preferences = new Preferences();
+			modelMap.addAttribute("preferences", preferences);
+		}
 		Park park = parkDao.getParkByParkCode(code);
 		modelMap.addAttribute("park", park);
 		return "parkDetails";
@@ -46,6 +50,7 @@ public class DetailsController {
 	public String updateTemperaturePreference(@RequestParam String code, Preferences preferences, ModelMap modelMap) {
 		modelMap.addAttribute("preferences", preferences);
 		modelMap.addAttribute("code", code);
-		return "redirect:/parkForecast?code="+code;
+		return "redirect:/parkForecast";
+//		return "redirect:/";
 	}
 }

@@ -2,12 +2,13 @@
 
 <section id="fiveDayForecast">
 	<c:url var="formAction" value="/parkForecast" />
-	<input type="hidden" name="code" value="${forecast[0].parkCode}">
+	
 	<form method="post" action="${formAction}" class="inline">
-  		<button type="submit" name="celcius" value="${!preferences.celcius}" class="link-button">
+	<input type="hidden" name="code" value="CVNP">
+  		<button type="submit" name="celcius" value="${!preferences.isCelcius()}" class="link-button">
     		<c:choose>
-    			<c:when test="${preferences.celcius}">
-    				Farhenheit
+    			<c:when test="${preferences.isCelcius()}">
+    				Fahrenheit
     			</c:when>
     			<c:otherwise>
     				Celcius
@@ -20,7 +21,7 @@
 		<img id="fiveDayImg" src="${weatherImgURL}" alt="${day.forecast}" >
 		<p id="fiveDayDay"> ${day.day} </p>
 		<c:choose>
-			<c:when test="${preferences.celsius}">
+			<c:when test="${preferences.isCelcius()}">
 				<p id="fiveDayHigh"> ${day.highC} Celcius</p>
 				<p id="fiveDayLow"> ${day.lowC} Celcius</p>
 			</c:when>
