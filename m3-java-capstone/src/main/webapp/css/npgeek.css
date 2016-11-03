@@ -53,6 +53,45 @@
 
 .headerGap {
 	height: 10px;
-	width: 1610px;
+	width: 100%;
 	background-color: black;
+}
+
+/* PARK DETAILS CLASSES  */
+
+.parkDetailsImage img{
+	width: 100%;
+	position: relative;
+	display: inline;
+	
+}
+
+.parkFactsList {
+	position: absolute;
+	box-sizing: border-box;
+	height: 400 px;
+	width: 200 px;
+	top: 300px;
+	left: 90px;
+	Background-color: #293db5;
+	border-style: ridge;
+	border-color: black;
+	border-radius: 10px;
+}	
+.parkFactsList p{
+	color: white;
+}
+
+.quote {
+	position: absolute;
+	box-sizing: border-box;
+	height: 100 px;
+	width: 1200 px;
+	top: 950px;
+	left: 175px;
+	Background-color: White;
+	border-style: ridge;
+	border-color: Gold;
+	border-radius: 10px;
+	text-align: center;
 }
