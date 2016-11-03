@@ -1,16 +1,8 @@
-.headerImagePlaceholder {
-	height: 110px;
-	width: 70%;
-	background-color: black;
-	display: inline-block;
-	text: white;
 
-	
-}
 
 #logo {
 	display: inline-block;
-	width: 25%;
+	width: 100%;
 	position: relative;
 	background-color: blue:
 	height : 110 px;
