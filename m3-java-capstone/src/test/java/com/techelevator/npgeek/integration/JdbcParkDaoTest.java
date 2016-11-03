@@ -30,4 +30,13 @@ public class JdbcParkDaoTest extends DaoIntegrationTest {
 		List<Park> parks = dao.getAllParks();
 		assertEquals(3, parks.size());
 	}
+	
+	@Test
+	public void dao_returns_specific_park_for_code() {
+		getSetup().addParkToDatabase("1");
+		getSetup().addParkToDatabase("2");
+		getSetup().addParkToDatabase("3");
+		Park park = dao.getParkByParkCode("2");
+		assertEquals("2", park.getParkCode());
+	}
 }

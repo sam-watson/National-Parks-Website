@@ -1,3 +1,9 @@
 #logo {
-	width: 100px;
+	width: 500px;
+}
+.parkListItem p {
+width: 400px;
+position: inline-block;
+background-color: red;
+text: orange;
 }

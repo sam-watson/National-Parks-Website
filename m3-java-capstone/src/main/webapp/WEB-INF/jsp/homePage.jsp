@@ -6,7 +6,7 @@
 <section id="main-content">
 	<c:forEach items="${parkList}" var="park">
 		<section class="parkListItem">
-			<c:url var="parkDetailsURL" value="/parkDetail?code=${park.parkCode}" />
+			<c:url var="parkDetailsURL" value="/parkDetails?code=${park.parkCode}" />
 			<a class="parkLink" href="${parkDetailsURL}" >
 				<c:url var="parkImgSrc" value="/img/parks/${fn:toLowerCase(park.parkCode)}.jpg" />
 				<img id="parkImg" src="${parkImgSrc}" alt="${park.parkName}" >
