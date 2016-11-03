@@ -24,17 +24,18 @@ public class JdbcForecastDao implements ForecastDao {
 	public List<ForecastDay> getForecastByPark(String parkcode) {
 	    List<ForecastDay> forecast = new ArrayList<>();
 	    
-	    String sqlSelectParkById = "SELECT * FROM park WHERE parkcode = ?;";
+	    String sqlSelectParkById = "SELECT * FROM weather WHERE parkcode = ?;";
 	    SqlRowSet rows = jdbcTemplate.queryForRowSet(sqlSelectParkById, parkcode);
 	    
 	    while(rows.next()){
 	        ForecastDay singleForecast = new ForecastDay();
 	        singleForecast.setParkCode(rows.getString("parkcode"));
-	        singleForecast.setDayNumber(rows.getInt("fivedayforecastvalue"));
-	        singleForecast.setHighF(rows.getDouble("low"));
-	        singleForecast.setLowF(rows.getDouble("high"));
+	        singleForecast.setDayNumber(rows.getInt("fiveDayForecastValue"));
+	        singleForecast.setLowF(rows.getDouble("low"));
+	        singleForecast.setHighF(rows.getDouble("high"));
 	        singleForecast.setForecast(rows.getString("forecast"));
 	        forecast.add(singleForecast);
+	        singleForecast.getDay();
 	    }
 	    return forecast;
 	}

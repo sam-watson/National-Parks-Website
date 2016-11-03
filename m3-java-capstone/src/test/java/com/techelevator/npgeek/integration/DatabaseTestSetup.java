@@ -26,4 +26,11 @@ public class DatabaseTestSetup {
 				"A happy park.", Math.random(), Math.random()
 				);
 	}
+	
+	public void addWeatherToDatabase(String parkCode, int dayNumber) {
+		String sqlInsertWeather = "INSERT INTO weather "
+				+ "(parkCode, fivedayforecastvalue, low, high, forecast) "
+				+ "VALUES (?,?,?,?,?)";
+		template.update(sqlInsertWeather, parkCode, dayNumber, 5, 6000, "hooray!");
+	}
 }

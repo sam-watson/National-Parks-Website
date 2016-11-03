@@ -31,4 +31,11 @@ public class DetailsController {
 		modelMap.addAttribute("park", park);
 		return "parkDetails";
 	}
+	
+	@RequestMapping("/parkForecast")
+	public String displayWeatherForecast(@RequestParam String code, ModelMap modelMap) {
+		List<ForecastDay> forecast = forecastDao.getForecastByPark(code);
+		modelMap.addAttribute("forecast", forecast);
+		return "parkForecast";
+	}
 }

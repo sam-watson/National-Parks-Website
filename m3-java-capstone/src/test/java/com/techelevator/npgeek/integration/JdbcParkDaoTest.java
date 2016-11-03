@@ -14,7 +14,7 @@ import com.techelevator.npgeek.model.ParkDao;
 
 public class JdbcParkDaoTest extends DaoIntegrationTest {
 
-	ParkDao dao;
+	private ParkDao dao;
 
 	@Before
 	public void setupDAO() {
