@@ -73,16 +73,23 @@ public class ForecastDay {
 	}
 	public String getAdvice() {
 		HashMap<String, String> adviceMap = new HashMap<>();
-		adviceMap.put("snow", "pack snowshoes");
-		adviceMap.put("rain", "pack rain gear and wear waterproof shoes");
-		adviceMap.put("thunderstorms", "seek shelter and avoid hiking on exposed ridges");
-		adviceMap.put("sun", "pack sunblock");
-		
+		adviceMap.put("snow", "Pack snowshoes.");
+		adviceMap.put("rain", "Pack rain gear and wear waterproof shoes.");
+		adviceMap.put("thunderstorms", "Possible storms: seek shelter and avoid hiking on exposed ridges.");
+		adviceMap.put("sunny", "Pack sunblock.");
+		String advice = adviceMap.get(forecast);
 		if (highF > 75) {
-			"bring an extra gallon of water";
+			advice += " Bring an extra gallon of water.";
 		}
-		h. If the difference between the high and low temperature exceeds 20 degrees, tell the user to wear breathable layers.
-		i. If the temperature is going to be below 20 degrees, make sure to warn the user of the dangers of exposure to frigid temperatures.
+		if (highF-lowF > 20) {
+			advice += " Wear breathable layers.";
+		}
+		if (lowF < 20) {
+			advice += " Exposure to frigid temperatures might result in loss of limbs."
+					+ " Be aware that snot will freeze to mustaches, in some cases permanently.";
+		}
+		//advice = advice.substring(0, 1).toUpperCase() + advice.substring(1);
+		return advice;
 	}
 	
 	public double tempFromFarenheitToCelsius(double tempF){
