@@ -16,20 +16,26 @@
     		</c:choose>
   		</button>
 	</form>
+	<div class = bigWeatherPicture>
 	<c:forEach var="day" items="${forecast}">
+		<div class = "weatherDay">
+		<div class = "weatherPicture">
 		<c:url var="weatherImgURL" value="/img/weather/${day.forecastImageName}.png" />
 		<img id="fiveDayImg" src="${weatherImgURL}" alt="${day.forecast}" >
-		<p id="fiveDayDay"> ${day.day} </p>
+		<h5 id="fiveDayDay"> ${day.day} </h5>
+		<p id="fiveDayWeather">${day.forecast} </p>
+		</div>
 		<c:choose>
 			<c:when test="${preferences.isCelcius()}">
-				<p id="fiveDayHigh"> ${day.highC} Celcius</p>
-				<p id="fiveDayLow"> ${day.lowC} Celcius</p>
+				<p id="fiveDayHigh">High: ${day.highC} Celcius</p>
+				<p id="fiveDayLow">Low: ${day.lowC} Celcius</p>
 			</c:when>
 			<c:otherwise>
-				<p id="fiveDayHigh"> ${day.highF} Fahrenheit</p>
-				<p id="fiveDayLow"> ${day.lowF} Fahrenheit</p>
+				<p id="fiveDayHigh">High: ${day.highF} Fahrenheit</p>
+				<p id="fiveDayLow">Low: ${day.lowF} Fahrenheit</p>
 			</c:otherwise>
 		</c:choose>
-		<p id="fiveDayWeather">${day.forecast} </p>
+		</div>
 	</c:forEach>
+	</div>
 </section>

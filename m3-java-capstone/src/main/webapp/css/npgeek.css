@@ -4,8 +4,8 @@
 	display: inline-block;
 	width: 100%;
 	position: relative;
-	background-color: blue:
-	height : 110 px;
+	background-color: blue;
+	height: 110 px;
 	
 
 }
@@ -19,6 +19,8 @@
 	box-sizing: border-box;
 	border: 5px solid black;
 	margin: 5px;
+	min-height: 630px;
+	
 }
 
 .parkListItem h4{
@@ -86,4 +88,38 @@
 	border-color: Gold;
 	border-radius: 10px;
 	text-align: center;
+}
+
+
+.weatherDay {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100px;
+	height: 450px;
+	text-align: center;
+	font-variant: small-caps;
+	border-style: solid;
+	Border-left: 5px;
+	overflow: hidden;
+	background-color: white;
+}
+
+.weatherDay h5{
+	text-decoration: underline;
+	}
+
+weatherPicture{
+	display: inline-block;
+	position: relative;
+	width: 20x;
+	height: auto;
+	align: center;
+	overflow: hidden;
+	right: 80px;
+}
+
+.bigWeatherPicture {
+	position: absolute;
+	top: 250px;
+	right: 100px;
 }
