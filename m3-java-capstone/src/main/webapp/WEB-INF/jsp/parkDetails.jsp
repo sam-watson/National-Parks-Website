@@ -33,4 +33,7 @@
 		<p id="inspirationalquotesource"> - ${park.inspirationalQuoteSource}</p>
 		</div>
 	</section>
+	<div>
+	<c:import url="/WEB-INF/jsp/common/fiveDayForecast.jsp" />
+	</div>
 </section>
