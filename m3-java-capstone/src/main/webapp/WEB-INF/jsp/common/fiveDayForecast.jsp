@@ -6,6 +6,7 @@
 	<form method="post" action="${formAction}" class="inline">
 	<input type="hidden" name="code" value="CVNP">
   		<button type="submit" name="celcius" value="${!preferences.isCelcius()}" class="link-button">
+  			View in 
     		<c:choose>
     			<c:when test="${preferences.isCelcius()}">
     				Fahrenheit
