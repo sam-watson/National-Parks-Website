@@ -4,9 +4,7 @@
 	display: inline-block;
 	width: 100%;
 	position: relative;
-	background-color: blue:
-	height : 110 px;
-	
+	background-color: blue;
 
 }
 
@@ -86,4 +84,29 @@
 	border-color: Gold;
 	border-radius: 10px;
 	text-align: center;
+}
+
+/* footer */ 
+
+#footerBar {
+	width: 100%;
+	background-color: #515f53;
+	height: 100px;
+}
+#npsLogo {
+	width: auto;
+    height: 100px;
+}
+#director {
+    float:right;
+}
+#director img {
+	width: auto;
+    height: 80px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+#director div {
+    display: inline-block;
 }
