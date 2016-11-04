@@ -33,4 +33,11 @@ public class DatabaseTestSetup {
 				+ "VALUES (?,?,?,?,?)";
 		template.update(sqlInsertWeather, parkCode, dayNumber, 5, 6000, "hooray!");
 	}
+	
+	public void addSurveyToDatabase(String parkCode) {
+		String sqlInsertSurvey = "INSERT INTO survey_result "
+				+ "(parkCode, emailAddress, state, activityLevel) "
+				+ "VALUES (?,?,?,?)";
+		template.update(sqlInsertSurvey, parkCode, "email", "oo", "2");
+	}
 }

@@ -5,7 +5,18 @@
 <form action="surveyForm" method="POST">
 	<div class="formGroup">		
 		<label for="favoritePark">Which park is YOUR favorite???</label>
-		<input type="text" name="language" id="language" />
+		<select name="favoritePark" id="favoritePark">
+			<option value="CVNP">Cuyahoga Valley National Park</option>
+			<option value="ENP">Everglades National Park</option>
+			<option value="GCNP">Grand Canyon National Park</option>
+			<option value="GNP">Glacier National Park</option>
+			<option value="GSMNP">Great Smoky Mountains National Park</option>
+			<option value="GTNP">Grand Teton National Park</option>
+			<option value="MRNP">Mount Rainier National Park</option>
+			<option value="RMNP">Rocky Mountain National Park</option>
+			<option value="YNP">Yellowstone National Park</option>
+			<option value="YNP2">Yosemite National Park</option>
+		</select>
 	</div>
 	<div class="formGroup">
 		<label for="email">Give us your email:</label>
