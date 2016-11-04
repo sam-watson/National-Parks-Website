@@ -18,6 +18,10 @@
         <a href="${homePageHref}">
         	<img id="logo" src="${logoSrc}" alt="National Park Geek logo" />
         </a>
+        <c:url value="/surveyForm" var="surveyHref" />
+        <a href="${surveyHref}">
+        	Vote for your favorite park!
+        </a>
         <div class = "headerGap">
     	</div>
         
