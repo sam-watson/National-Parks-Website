@@ -36,6 +36,8 @@ public class DetailsController {
 		}
 		Park park = parkDao.getParkByParkCode(code);
 		modelMap.addAttribute("park", park);
+		List<ForecastDay> forecast = forecastDao.getForecastByPark(code);
+		modelMap.addAttribute("forecast", forecast);
 		return "parkDetails";
 	}
 	
