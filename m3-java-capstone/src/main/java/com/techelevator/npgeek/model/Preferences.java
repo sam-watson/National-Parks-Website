@@ -2,13 +2,13 @@ package com.techelevator.npgeek.model;
 
 public class Preferences {
 	
-	private Boolean isCelcius;
-
-	public Boolean getCelcius() {
-		return isCelcius;
+	private boolean celcius = false;
+	
+	public boolean isCelcius() {
+		return celcius;
 	}
 
-	public void setCelcius(Boolean celcius) {
-		this.isCelcius = celcius;
+	public void setCelcius(boolean celcius) {
+		this.celcius = celcius;
 	}
 }
