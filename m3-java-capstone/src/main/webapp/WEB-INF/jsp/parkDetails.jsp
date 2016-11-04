@@ -27,24 +27,34 @@
 		<p id="entryfee">Entry Fee: \$ ${park.entryFee}.00</p>
 		<p id="numberofanimalspecies">Species of Animals: ${park.numberOfAnimalSpecies}</p>
 		</div>
-		<div>
+		
+		<div class="5-dayForecast">
 			<c:import url="/WEB-INF/jsp/common/fiveDayForecast.jsp" />
 		</div>
+			
 		<div class="quote">
 		<h2 id="inspirationalquote">"${park.inspirationalquote}"</h2>
 		<p id="inspirationalquotesource"> - ${park.inspirationalQuoteSource}</p>
 		</div>
+	
 	</section>
+	
 	<section>
-	<div id="bigDayForecast">
-		<h1>Today's Weather</h1>
+	<div id="todaysForecast">
+		<div class="todaysForecastPicture">
 		<c:set var="bigDay" value="${forecast[0]}"/>
 		<c:url var="weatherImgURL" value="/img/weather/${forecast[0].forecastImageName}.png" />
 		<img id="bigDayImg" src="${weatherImgURL}" alt="${forecast[0].forecast}" >
-		<p id="bigDayHigh"> ${forecast[0].highF} </p>
-		<p id="bigDayLow"> ${forecast[0].lowF} </p>
-		<p id="bigDayWeather">${forecast[0].forecast}
+		</div>
+		
+		<div class="todaysForecastWords">
+		<h2>Today's Weather</h2>
+		<p id="bigDayWeather">Forecast: ${forecast[0].forecast}
+		<p id="bigDayHigh"> High: ${forecast[0].highF} </p>
+		<p id="bigDayLow"> Low: ${forecast[0].lowF} </p>
 		<p id="advice">${forecast[0].getAdvice()} </p>
+		</div>
+	
 	</div>
 	</section>
 </section>

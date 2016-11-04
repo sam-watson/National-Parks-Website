@@ -1,4 +1,5 @@
 
+/*Home Page*/
 
 #logo {
 	display: inline-block;
@@ -59,13 +60,14 @@
 	background-color: black;
 }
 
-/* PARK DETAILS CLASSES  */
+
+
+/* PARK DETAILS - Facts  */
 
 .parkDetailsImage img{
 	width: 100%;
 	position: relative;
 	display: inline;
-	
 }
 
 .parkFactsList {
@@ -81,9 +83,12 @@
 	border-radius: 10px;
 	opacity: 0.7;
 }	
+
 .parkFactsList p{
 	color: white;
 }
+
+/* PARK DETAILS - Quote  */
 
 .quote {
 	position: absolute;
@@ -100,9 +105,16 @@
 	opacity: 0.7;
 	
 }
+/* PARK DETAILS - Weather  */
 
+.fiveDayBlock {
+	position: absolute;
+	top: 420px;
+	right: 100px;
+	opacity: 0.7;
+}
 
-.weatherDay {
+.singleDay {
 	display: inline-block;
 	box-sizing: border-box;
 	width: 100px;
@@ -115,26 +127,53 @@
 	background-color: white;
 }
 
-
-.weatherDay h5{
+.singleDay h5{
 	text-decoration: underline;
-	}
-
-weatherPicture{
-	display: inline-block;
-	position: relative;
-	width: 20x;
-	height: auto;
-	align: center;
-	overflow: hidden;
-	right: 80px;
 }
 
-.bigWeatherPicture {
+
+/* PARK DETAILS - Weather - Today's Forecast  */
+
+
+#todaysForecast {
 	position: absolute;
+	display: inline-block;
 	top: 250px;
-	right: 100px;
+	right: 150px;
+	box-sizing: border-box;
+	width: 400px;
+	height: 140px;
+	background-color: white;
+	border-style: solid;
+	Border-left: 5px;
 	opacity: 0.7;
+	
+}
+
+.todaysForecastPicture img{
+	display: inline-block;
+	height: 130px;
+
+	float: left;
+}
+	
+.todaysForecastWords {
+	display: inline;
+	vertical-align: top;
+	text-align: center;
+	top: -100px;
+	font-variant: small-caps;
+}
+
+.todaysForecastWords h2{
+	line-height:30%;	
+	font-size: 120%;
+	text-decoration: underline;
+}
+	
+.todaysForecastWords p{
+	margin: 8px;
+	line-height: 80%;	
 }
 
 /* footer */ 
@@ -150,6 +189,8 @@ weatherPicture{
 }
 #director {
     float:right;
+    color: white;
+    line-height: 50%
 }
 #director img {
 	width: auto;
@@ -161,3 +202,5 @@ weatherPicture{
 #director div {
     display: inline-block;
 }
+
+

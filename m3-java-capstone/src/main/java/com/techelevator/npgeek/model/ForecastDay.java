@@ -77,7 +77,9 @@ public class ForecastDay {
 		adviceMap.put("snow", "Pack snowshoes.");
 		adviceMap.put("rain", "Pack rain gear and wear waterproof shoes.");
 		adviceMap.put("thunderstorms", "Possible storms: seek shelter and avoid hiking on exposed ridges.");
-		adviceMap.put("sunny", "Pack sunblock.");
+		adviceMap.put("sunny", "You know where else it is sunny today? Philadelphia...");
+		adviceMap.put("partly cloudy", "Don't worry about the weather, you'll be fine.");
+		adviceMap.put("cloudy", "Make sure you bring a jacket! Unless it's also warm then you won't need a jacket.");
 		String advice = adviceMap.get(forecast);
 		if (highF > 75) {
 			advice += " Bring an extra gallon of water.";

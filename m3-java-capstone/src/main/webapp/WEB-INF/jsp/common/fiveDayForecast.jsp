@@ -17,15 +17,14 @@
     		</c:choose>
   		</button>
 	</form>
-	<div class = bigWeatherPicture>
+	
+	<div class = fiveDayBlock>
 	<c:forEach var="day" items="${forecast}">
-		<div class = "weatherDay">
-		<div class = "weatherPicture">
+		<div class = "singleDay">
 		<c:url var="weatherImgURL" value="/img/weather/${day.forecastImageName}.png" />
 		<img id="fiveDayImg" src="${weatherImgURL}" alt="${day.forecast}" >
 		<h5 id="fiveDayDay"> ${day.day} </h5>
 		<p id="fiveDayWeather">${day.forecast} </p>
-		</div>
 		<c:choose>
 			<c:when test="${preferences.isCelcius()}">
 				<p id="fiveDayHigh">High: ${day.highC} Celcius</p>
