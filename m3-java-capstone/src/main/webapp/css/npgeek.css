@@ -6,6 +6,16 @@
 	position: relative;
 }
 
+.container {
+	text-align: center;
+}
+
+.contianer h3{
+	position: block;
+	width: 100%;
+	visibility: hidden;
+}
+
 .parkListItem {
 	text: #f9f413;
 	background-color: #68b9c3;
@@ -63,12 +73,13 @@
 	box-sizing: border-box;
 	height: 400 px;
 	width: 200 px;
-	top: 300px;
+	top: 250px;
 	left: 90px;
 	Background-color: #293db5;
 	border-style: ridge;
 	border-color: black;
 	border-radius: 10px;
+	opacity: 0.7;
 }	
 .parkFactsList p{
 	color: white;

@@ -13,6 +13,7 @@
     	</div>
 
 <section id="main-content">
+	<div class="container">
 	<c:forEach items="${parkList}" var="park">
 		<section class="parkListItem">
 			<c:url var="parkDetailsURL" value="/parkDetails?code=${park.parkCode}" />
@@ -25,5 +26,9 @@
 				<p id="description">${park.parkDescription}</p>
 		</section>
 	</c:forEach>
+	<h3>
+		
+	</h3>
+	</div>
 </section>
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
