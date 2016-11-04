@@ -2,3 +2,4 @@
 
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 
+<p> THANK YOU FOR YOUR SUBMISSION! </p>
