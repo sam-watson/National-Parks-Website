@@ -27,7 +27,9 @@
 		<p id="entryfee">Entry Fee: \$ ${park.entryFee}.00</p>
 		<p id="numberofanimalspecies">Species of Animals: ${park.numberOfAnimalSpecies}</p>
 		</div>
-		
+		<div>
+			<c:import url="/WEB-INF/jsp/common/fiveDayForecast.jsp" />
+		</div>
 		<div class="quote">
 		<h2 id="inspirationalquote">"${park.inspirationalquote}"</h2>
 		<p id="inspirationalquotesource"> - ${park.inspirationalQuoteSource}</p>
