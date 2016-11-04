@@ -52,7 +52,6 @@ public class DetailsController {
 	public String updateTemperaturePreference(@RequestParam String code, Preferences preferences, ModelMap modelMap) {
 		modelMap.addAttribute("preferences", preferences);
 		modelMap.addAttribute("code", code);
-		return "redirect:/parkForecast";
-//		return "redirect:/";
+		return "redirect:/parkDetails";
 	}
 }

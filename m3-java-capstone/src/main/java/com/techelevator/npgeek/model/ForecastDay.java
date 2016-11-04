@@ -1,5 +1,6 @@
 package com.techelevator.npgeek.model;
 
+import java.text.DecimalFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
@@ -44,11 +45,11 @@ public class ForecastDay {
 	public void setLowF(double lowF) {
 		this.lowF = lowF;
 	}
-	public double getHighC() {
-		return tempFromFarenheitToCelsius(getHighF());
+	public String getHighC() {
+		return new DecimalFormat("#.#").format(tempFromFarenheitToCelsius(getHighF()));
 	}
-	public double getLowC() {
-		return tempFromFarenheitToCelsius(getLowF());
+	public String getLowC() {
+		return new DecimalFormat("#.#").format(tempFromFarenheitToCelsius(getLowF()));
 	}
 	public String getForecast() {
 		return forecast;
