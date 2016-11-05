@@ -131,6 +131,13 @@
 	text-decoration: underline;
 }
 
+#tempButton {
+	position: absolute;
+	top: 390px;
+	right: 152px;
+	opacity: 0.7;
+}
+
 
 /* PARK DETAILS - Weather - Today's Forecast  */
 
