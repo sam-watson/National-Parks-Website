@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.techelevator.npgeek.model.ForecastDao;
-import com.techelevator.npgeek.model.ForecastDay;
+import com.techelevator.npgeek.model.DailyForecast;
 import com.techelevator.npgeek.model.Park;
 import com.techelevator.npgeek.model.ParkDao;
 import com.techelevator.npgeek.model.Preferences;
@@ -38,14 +38,14 @@ public class DetailsController {
 		}
 		Park park = parkDao.getParkByParkCode(code);
 		modelMap.addAttribute("park", park);
-		List<ForecastDay> forecast = forecastDao.getForecastByPark(code);
+		List<DailyForecast> forecast = forecastDao.getForecastByPark(code);
 		modelMap.addAttribute("forecast", forecast);
 		return "parkDetails";
 	}
 	
 	@RequestMapping(path="/parkForecast", method=RequestMethod.GET)
 	public String displayWeatherForecast(@RequestParam String code, ModelMap modelMap) {
-		List<ForecastDay> forecast = forecastDao.getForecastByPark(code);
+		List<DailyForecast> forecast = forecastDao.getForecastByPark(code);
 		modelMap.addAttribute("forecast", forecast);
 		return "parkForecast";
 	}

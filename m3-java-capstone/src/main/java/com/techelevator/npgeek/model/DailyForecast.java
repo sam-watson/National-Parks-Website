@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class ForecastDay {
+public class DailyForecast {
 
 	private String parkCode;
 	private int dayNumber;
@@ -88,8 +88,8 @@ public class ForecastDay {
 			advice += " Wear breathable layers.";
 		}
 		if (lowF < 20) {
-			advice += " Exposure to frigid temperatures might result in loss of limbs."
-					+ " Be aware that snot will freeze to mustaches, in some cases permanently.";
+			advice += " Frigid temperatures might result in loss of toes"
+					+ " and make mustaches look even worse than normal.";
 		}
 		//advice = advice.substring(0, 1).toUpperCase() + advice.substring(1);
 		return advice;

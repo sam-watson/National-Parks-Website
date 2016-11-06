@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface ForecastDao {
 	
-	public List<ForecastDay> getForecastByPark(String parkcode);
+	public List<DailyForecast> getForecastByPark(String parkcode);
 }

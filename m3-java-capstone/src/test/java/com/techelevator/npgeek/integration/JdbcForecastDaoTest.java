@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.techelevator.npgeek.model.ForecastDao;
-import com.techelevator.npgeek.model.ForecastDay;
+import com.techelevator.npgeek.model.DailyForecast;
 import com.techelevator.npgeek.model.JdbcForecastDao;
 import com.techelevator.npgeek.model.JdbcParkDao;
 import com.techelevator.npgeek.model.Park;
@@ -34,7 +34,7 @@ public class JdbcForecastDaoTest extends DaoIntegrationTest {
 		getSetup().addWeatherToDatabase(parkCode, 2);
 		getSetup().addWeatherToDatabase(parkCode, 3);
 		getSetup().addWeatherToDatabase(parkCode, 4);
-		List<ForecastDay> fiveDayForecast = dao.getForecastByPark(parkCode);
+		List<DailyForecast> fiveDayForecast = dao.getForecastByPark(parkCode);
 		assertEquals(4, fiveDayForecast.size());
 	}
 	
@@ -48,7 +48,7 @@ public class JdbcForecastDaoTest extends DaoIntegrationTest {
 		getSetup().addWeatherToDatabase(rightCode, 2);
 		getSetup().addWeatherToDatabase(wrongCode, 1);
 		getSetup().addWeatherToDatabase(wrongCode, 2);
-		List<ForecastDay> fiveDayForecast = dao.getForecastByPark(rightCode);
+		List<DailyForecast> fiveDayForecast = dao.getForecastByPark(rightCode);
 		assertEquals(rightCode, fiveDayForecast.get(0).getParkCode());
 	}
 

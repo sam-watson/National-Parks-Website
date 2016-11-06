@@ -1,6 +1,14 @@
 
 /*Home Page*/
 
+body {
+	background-color: darkslategray;
+}
+
+.allHeaderText {
+	color: powderblue;
+}
+
 #logo {
 	display: inline-block;
 	width: 100%;
@@ -11,7 +19,7 @@
 	text-align: center;
 }
 
-.contianer h3{
+.container h3{
 	position: block;
 	width: 100%;
 	visibility: hidden;
