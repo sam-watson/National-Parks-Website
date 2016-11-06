@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.techelevator.npgeek.model.Park;
 import com.techelevator.npgeek.model.Survey;
 import com.techelevator.npgeek.model.SurveyDao;
 
@@ -34,7 +35,15 @@ public class SurveyController {
 	
 	@RequestMapping("/surveyResults")
 	public String displaySurveyResults(ModelMap modelMap) {
-		surveyDao.getWinningPark();
+		Park winner = surveyDao.getWinningPark();
+		modelMap.addAttribute("winner", winner);
+		String winPic;
+		if (Math.random() > 0.5) {
+			winPic = "trophytree";
+		} else {
+			winPic = "treetrophy";
+		}
+		modelMap.addAttribute("winPic", winPic);
 		return "surveyResults";
 	}
 }

@@ -3,9 +3,6 @@
 
 body {
 	background-color: darkslategray;
-}
-
-.allHeaderText {
 	color: powderblue;
 }
 
@@ -13,6 +10,10 @@ body {
 	display: inline-block;
 	width: 100%;
 	position: relative;
+}
+
+ #surveyLink {
+	color: powderblue;
 }
 
 .container {
@@ -218,4 +219,35 @@ body {
     display: inline-block;
 }
 
+/* Survey Result */
+
+#surveyThanks {
+	text-align: center;
+}
+
+#winnerBlock {
+	position: relative;
+    text-align: center;
+    top: 0spx;
+    background: #f9f413;
+    border-style: dotted;
+    z-index: 1;
+    padding: 20px;
+    color: crimson;
+    opacity: .9;
+}
+
+#winnerImg {
+	width: 80%;
+	margin-left: 10%;
+}
+
+#winner {
+	font-size: xx-large;
+}	
+
+#winnerIs {
+	color: black;
+	font-size: x-large;
+}
 
