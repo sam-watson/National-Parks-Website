@@ -14,19 +14,21 @@ import com.techelevator.npgeek.model.SurveyDao;
 
 public class JdbcSurveyDaoTest extends DaoIntegrationTest{
 
-	private SurveyDao dao;
+	private SurveyDao surveyDao;
+	private ParkDao parkDao;
 	
 	@Before
 	public void setupDAO() {
 		DataSource dataSource = getDataSource();
-		dao = new JdbcSurveyDao(dataSource);
+		surveyDao = new JdbcSurveyDao(dataSource);
 	}
 	
 	@Test
 	public void dao_can_save_new_surveys() {
 		getSetup().addParkToDatabase("P");
 		getSetup().addSurveyToDatabase("P");
-		Park parkWinner = dao.getWinningPark();
+		
+		Park parkWinner = surveyDao.getParkVotes().get(key);
 		assertEquals("P", parkWinner.getParkCode());
 	}
 	
@@ -41,7 +43,7 @@ public class JdbcSurveyDaoTest extends DaoIntegrationTest{
 		getSetup().addSurveyToDatabase("winningest");
 		getSetup().addSurveyToDatabase("nope");
 		getSetup().addSurveyToDatabase("sucks");
-		Park parkWinner = dao.getWinningPark();
+		Park parkWinner = surveyDao.getWinningPark();
 		assertEquals("winningest", parkWinner.getParkCode());
 	}
 }

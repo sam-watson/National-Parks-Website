@@ -1,5 +1,7 @@
 package com.techelevator.npgeek.model;
 
+import java.util.HashMap;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,18 +30,20 @@ public class JdbcSurveyDao implements SurveyDao {
 	}
 
 	@Override
-	public Park getWinningPark() {
+	public HashMap<Park, Integer> getParkVotes() {
 		String sqlCountAllParkVotes = "SELECT parkCode, count(parkCode) "
 				+ "FROM survey_result "
 				+ "GROUP BY parkCode "
 				+ "ORDER BY count(parkCode) DESC";
 		SqlRowSet rows = jdbcTemplate.queryForRowSet(sqlCountAllParkVotes);
-		Park park = null;
-		if(rows.next()) {
-			String parkCode = rows.getString("parkCode");
+		HashMap<Park, Integer> parkVotes = new HashMap<>();
+		while(rows.next()) {
+			Park park = null;
+			String parkCode = rows.getString(0);
 			park = parkDao.getParkByParkCode(parkCode);
+			int votes = rows.getInt(1);
+			parkVotes.put(park, votes);
 		}
-		return park;
+		return parkVotes;
 	}
-
 }
