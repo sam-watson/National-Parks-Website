@@ -1,5 +1,8 @@
 package com.techelevator.npgeek.controller;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -35,7 +38,11 @@ public class SurveyController {
 	
 	@RequestMapping("/surveyResults")
 	public String displaySurveyResults(ModelMap modelMap) {
-		Park winner = surveyDao.getWinningPark();
+		LinkedHashMap<Park, Integer> parkVotes = surveyDao.getParkVotes();
+		Park winner = null;
+		if (!parkVotes.isEmpty()) {
+			parkVotes.
+		}
 		modelMap.addAttribute("winner", winner);
 		String winPic;
 		if (Math.random() > 0.5) {

@@ -1,6 +1,7 @@
 package com.techelevator.npgeek.model;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import javax.sql.DataSource;
 
@@ -30,13 +31,13 @@ public class JdbcSurveyDao implements SurveyDao {
 	}
 
 	@Override
-	public HashMap<Park, Integer> getParkVotes() {
+	public LinkedHashMap<Park, Integer> getParkVotes() {
 		String sqlCountAllParkVotes = "SELECT parkCode, count(parkCode) "
 				+ "FROM survey_result "
 				+ "GROUP BY parkCode "
 				+ "ORDER BY count(parkCode) DESC";
 		SqlRowSet rows = jdbcTemplate.queryForRowSet(sqlCountAllParkVotes);
-		HashMap<Park, Integer> parkVotes = new HashMap<>();
+		LinkedHashMap<Park, Integer> parkVotes = new LinkedHashMap<>();
 		while(rows.next()) {
 			Park park = null;
 			String parkCode = rows.getString(0);

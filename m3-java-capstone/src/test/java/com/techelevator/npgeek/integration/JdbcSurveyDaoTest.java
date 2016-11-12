@@ -2,6 +2,8 @@ package com.techelevator.npgeek.integration;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.LinkedHashMap;
+
 import javax.sql.DataSource;
 
 import org.junit.Before;
@@ -9,6 +11,7 @@ import org.junit.Test;
 
 import com.techelevator.npgeek.model.JdbcSurveyDao;
 import com.techelevator.npgeek.model.Park;
+import com.techelevator.npgeek.model.ParkDao;
 import com.techelevator.npgeek.model.SurveyDao;
 
 
@@ -27,9 +30,8 @@ public class JdbcSurveyDaoTest extends DaoIntegrationTest{
 	public void dao_can_save_new_surveys() {
 		getSetup().addParkToDatabase("P");
 		getSetup().addSurveyToDatabase("P");
-		
-		Park parkWinner = surveyDao.getParkVotes().get(key);
-		assertEquals("P", parkWinner.getParkCode());
+		Park p = parkDao.getParkByParkCode("P");
+		assertEquals("P", surveyDao.getParkVotes().containsKey(p);
 	}
 	
 	@Test
@@ -43,7 +45,10 @@ public class JdbcSurveyDaoTest extends DaoIntegrationTest{
 		getSetup().addSurveyToDatabase("winningest");
 		getSetup().addSurveyToDatabase("nope");
 		getSetup().addSurveyToDatabase("sucks");
-		Park parkWinner = surveyDao.getWinningPark();
-		assertEquals("winningest", parkWinner.getParkCode());
+		LinkedHashMap<Park, Integer> allVotes = surveyDao.getParkVotes();
+		Park winner = null;
+		int winVotes = 0;
+		
+		assertEquals("winningest", winner.getParkCode());
 	}
 }

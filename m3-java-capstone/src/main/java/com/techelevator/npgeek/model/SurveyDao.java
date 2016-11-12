@@ -1,10 +1,10 @@
 package com.techelevator.npgeek.model;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public interface SurveyDao {
 
 	public void saveSurvey(Survey survey);
 	//public Park getWinningPark();
-	public HashMap<Park, Integer> getParkVotes();
+	public LinkedHashMap<Park, Integer> getParkVotes();
 }
